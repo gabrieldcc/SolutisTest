@@ -115,7 +115,6 @@
 				A54C23E6232F563E7C36E32A /* Pods-TestSolutisTests.debug.xcconfig */,
 				9E272989EF584505835551AA /* Pods-TestSolutisTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -190,6 +189,7 @@
 		855157EE29AA3FB500AE5A98 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				855157F829AA53D300AE5A98 /* New Group */,
 				855157F529AA4A4F00AE5A98 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
@@ -228,6 +228,13 @@
 				855157F329AA43B900AE5A98 /* UIImageView+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		855157F829AA53D300AE5A98 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -36,11 +36,20 @@ final class LoginViewController: UIViewController {
         logoImage.layer.masksToBounds = true
     }
     
+    
+    
     //MARK: - Actions
     @IBAction func loginButton(_ sender: Any) {
-        guard let user = userTextField.text else { return }
-        print(loginViewModel.isValidUser(login: user))
+        guard let user = userTextField.text,
+              let password = passwordTextField.text else { return }
+    
+        loginViewModel.isValid(user: user, password: password)
+        
+        
+        
+        
     }
+    
     
 }
 
