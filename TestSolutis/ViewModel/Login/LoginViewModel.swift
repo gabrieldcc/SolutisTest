@@ -9,7 +9,6 @@ import Foundation
 import CPF_CNPJ_Validator
 
 final class LoginViewModel {
-    
     func isValid(user: String, password: String) -> Bool {
         if isValid(user: user) && isValid(password: password) {
             return true

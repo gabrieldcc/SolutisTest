@@ -41,7 +41,7 @@ final class LoginViewController: UIViewController {
     
     fileprivate func setLoginButton() {
         loginButton.layer.cornerRadius = 20
-        logoImage.layer.masksToBounds = true
+        loginButton.layer.masksToBounds = true
     }
     
     fileprivate func showLoginErrorLabel() {
