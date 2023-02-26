@@ -52,11 +52,21 @@
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="54I-Fv-jd4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email ou senha inválidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9f-K4-zhZ">
+                                <rect key="frame" x="40" y="284" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jv5-Qh-5Eo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y8m-it-fqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0oD-RK-bWP"/>
+                            <constraint firstItem="N9f-K4-zhZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5D2-FR-Mkx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nV8-uu-sv6" secondAttribute="trailing" constant="40" id="81h-ct-6cB"/>
                             <constraint firstItem="rKf-x8-WQs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="FHf-P4-VuA"/>
                             <constraint firstItem="EbL-eP-z9H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Feb-9R-674"/>
@@ -65,12 +75,15 @@
                             <constraint firstItem="nV8-uu-sv6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Qlb-pp-khU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y8m-it-fqB" secondAttribute="trailing" constant="40" id="WuQ-ra-nGe"/>
                             <constraint firstItem="y8m-it-fqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="X0o-ao-sYZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N9f-K4-zhZ" secondAttribute="trailing" constant="40" id="axb-AJ-nUE"/>
                             <constraint firstItem="EbL-eP-z9H" firstAttribute="top" secondItem="nV8-uu-sv6" secondAttribute="bottom" constant="16" id="fZm-B7-rSo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rKf-x8-WQs" secondAttribute="trailing" constant="120" id="lcP-OT-sci"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rKf-x8-WQs" secondAttribute="bottom" constant="24" id="vUU-U0-RUB"/>
+                            <constraint firstItem="N9f-K4-zhZ" firstAttribute="top" secondItem="y8m-it-fqB" secondAttribute="bottom" constant="40" id="zmo-1j-1Ox"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="N9f-K4-zhZ" id="xHV-uq-GzZ"/>
                         <outlet property="loginButton" destination="rKf-x8-WQs" id="8km-sr-lg1"/>
                         <outlet property="logoImage" destination="y8m-it-fqB" id="PpZ-iX-rii"/>
                         <outlet property="passwordTextField" destination="EbL-eP-z9H" id="Kpl-4h-OFW"/>
@@ -88,6 +101,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
