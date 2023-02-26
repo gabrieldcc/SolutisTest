@@ -19,15 +19,20 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    //MARK: - Lifecycle view
+    //MARK: - View lifecycle 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLogoImage()
-        setLoginButton()
-        errorLabel.text = ""
+        setupView()
     }
     
     //MARK: - Funcs
+    fileprivate func setupView() {
+        setLogoImage()
+        setLoginButton()
+        errorLabel.text = ""
+        passwordTextField.isSecureTextEntry = true
+    }
+    
     fileprivate func setLogoImage() {
         let url =
         "https://solutis.com.br/wp-content/uploads/2018/04/logo_solutis_401-2.png"
@@ -39,12 +44,8 @@ final class LoginViewController: UIViewController {
         logoImage.layer.masksToBounds = true
     }
     
-    fileprivate func showErrorLabel() {
-        if isValidUser {
-            errorLabel.text = ""
-        } else {
-            errorLabel.text = "Email ou senha inválidos"
-        }
+    fileprivate func showLoginErrorLabel() {
+        errorLabel.text = isValidUser ? "" : "Email ou senha inválidos"
     }
     
     //MARK: - Actions
@@ -53,7 +54,7 @@ final class LoginViewController: UIViewController {
               let password = passwordTextField.text else { return }
     
         isValidUser = loginViewModel.isValid(user: user, password: password)
-        showErrorLabel()
+        showLoginErrorLabel()
         
         if isValidUser {
             //success

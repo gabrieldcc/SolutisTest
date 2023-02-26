@@ -189,8 +189,7 @@
 		855157EE29AA3FB500AE5A98 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				855157F829AA53D300AE5A98 /* New Group */,
-				855157F529AA4A4F00AE5A98 /* LoginViewModel.swift */,
+				855157F829AA53D300AE5A98 /* Login */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -230,11 +229,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		855157F829AA53D300AE5A98 /* New Group */ = {
+		855157F829AA53D300AE5A98 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				855157F529AA4A4F00AE5A98 /* LoginViewModel.swift */,
 			);
-			path = "New Group";
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

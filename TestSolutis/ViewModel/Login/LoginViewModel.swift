@@ -17,7 +17,7 @@ final class LoginViewModel {
         return false
     }
     
-   fileprivate func isValid(user: String) -> Bool {
+    fileprivate func isValid(user: String) -> Bool {
         if isValid(cpf: user) || isValid(email: user) {
             return true
         }
